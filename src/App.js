@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { RootRouter } from './RootRouter'
+import { UserLoginPage } from './user/pages/index'
+import JsonData from "./config/data.json"
 
-function App() {
+
+export default function App() {
+  const [ landingPageData, setLandingPageData ] = useState({})
+  const getLandingPage = () => { setLandingPageData(JsonData) }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserLoginPage/>
     </div>
   );
 }
 
-export default App;
