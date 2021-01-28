@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { RootRouter } from './RootRouter'
-import { UserLoginPage } from './user/pages/index'
+import { UserLoginPage } from './uss/pages/index'
 import JsonData from "./config/data.json"
 
 
